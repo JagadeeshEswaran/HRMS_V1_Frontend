@@ -1,0 +1,9 @@
+.main {
+	/* border: 1px dotted blue; */
+	background: #000;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.login_input {
+	border: 1px dotted blue;
+}
