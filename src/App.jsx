@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import UserCreation_Main from "./pages/UserCreation/UserCreation_Main";
+import UserUpdation_Main from "./pages/UserUpdation/UserUpdation_Main";
 
 function App() {
 	return (
@@ -20,6 +22,28 @@ function App() {
 
 				{/* General Routes */}
 				<Route path="/dashboard" element={<Dashboard />} />
+
+				{/* Creation Routes */}
+				<Route
+					path="/create/branch-user-creation"
+					element={<UserCreation_Main user_type="br_user" />}
+				/>
+
+				<Route
+					path="/create/branch-admin-creation"
+					element={<UserCreation_Main user_type="br_admin" />}
+				/>
+
+				{/* Updation Routes */}
+				<Route
+					path="/update/branch-user-creation"
+					element={<UserUpdation_Main user_type="br_user" />}
+				/>
+
+				<Route
+					path="/update/branch-admin-creation"
+					element={<UserUpdation_Main user_type="br_admin" />}
+				/>
 			</Routes>
 		</BrowserRouter>
 	);
